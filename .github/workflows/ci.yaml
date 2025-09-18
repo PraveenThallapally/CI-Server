@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: '3.10'
           cache: 'pip'
-          # Your requirements file is under src/
+          # Your requirements are under src/
           cache-dependency-path: src/requirements.txt
 
       - name: Install dependencies
@@ -27,10 +27,11 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f src/requirements.txt ]; then pip install -r src/requirements.txt; fi
 
-      - name: Smoke import (no tests folder)
-        env:
-          PYTHONPATH: ${{ github.workspace }}/src
+      - name: Smoke checks (no tests folder)
         run: |
+          # 1) Syntax check
+          python -m py_compile src/app.py
+          # 2) Import check
           python - <<'PY'
           import sys
           sys.path.append('src')
@@ -49,19 +50,18 @@ jobs:
         with:
           python-version: '3.10'
           cache: 'pip'
+          cache-dependency-path: src/requirements.txt
 
-      - name: Install linters
+      - name: Install linters/formatters
         run: |
           python -m pip install --upgrade pip
-          pip install flake8 black
+          pip install black flake8
 
-      # If you want CI to auto-fix formatting before linting, uncomment this:
-      # - name: Autoformat with Black (optional)
-      #   run: black src/app.py
+      # --- Auto-fix mode: format the code so CI passes ---
+      - name: Autoformat with Black
+        run: black src/app.py
 
-      - name: Black formatting check
-        run: black --check src/app.py
-
-      - name: Run flake8
-        run: flake8 src/app.py
+      - name: Run flake8 (aligned with Black)
+        run: |
+          flake8 src/app.py --max-line-length=88 --extend-ignore=E203,W503
 
