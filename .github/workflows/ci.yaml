@@ -6,7 +6,11 @@ on:
 
   pull_request:
 
-    branches: [main]
+    branches:
+
+      - main
+
+
 
 jobs:
 
@@ -38,7 +42,7 @@ jobs:
 
       run: |
 
-        cd src/myapp
+        cd src
 
         python -m pip install --upgrade pip
 
@@ -50,7 +54,7 @@ jobs:
 
       run: |
 
-        cd src/app
+        cd src
 
         pytest
 
@@ -76,6 +80,6 @@ jobs:
 
         pip install flake8
 
-        cd src/app
+        cd src
 
-        flake8
+        flake8 .
