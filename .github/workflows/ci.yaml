@@ -1,0 +1,85 @@
+name: myapp-ci
+
+
+
+on:
+
+  pull_request:
+
+    branches:
+
+      - main
+
+
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+
+
+    steps:
+
+    - name: Checkout code
+
+      uses: actions/checkout@v4
+
+
+
+    - name: Set up Python 3.10
+
+      uses: actions/setup-python@v4
+
+      with:
+
+        python-version: '3.10'
+
+
+
+    - name: Install dependencies
+
+      run: |
+
+        cd src/myapp
+
+        python -m pip install --upgrade pip
+
+        pip install -r requirements.txt
+
+
+
+    - name: Run unit tests
+
+      run: |
+
+        cd src/app
+
+        pytest
+
+
+
+  code-quality:
+
+    runs-on: ubuntu-latest
+
+
+
+    steps:
+
+    - name: Checkout code
+
+      uses: actions/checkout@v4
+
+
+
+    - name: Run flake8 linter
+
+      run: |
+
+        pip install flake8
+
+        cd src/app
+
+        flake8

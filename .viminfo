@@ -12,7 +12,7 @@
 ~H
 # Command Line History (newest to oldest):
 :wq
-|2,0,1758203623,,"wq"
+|2,0,1758204428,,"wq"
 
 # Search String History (newest to oldest):
 
@@ -25,22 +25,38 @@
 # Registers:
 
 # File marks:
-'0  33  0  ~/src/Dockerfile
-|4,48,33,0,1758203623,"~/src/Dockerfile"
-'1  2  6  ~/src/requirements.txt
-|4,49,2,6,1758203587,"~/src/requirements.txt"
-'2  39  0  ~/src/app.py
-|4,50,39,0,1758203567,"~/src/app.py"
+'0  1  13  ~/.github/workflows/ci.yaml
+|4,48,1,13,1758204428,"~/.github/workflows/ci.yaml"
+'1  33  0  ~/src/Dockerfile
+|4,49,33,0,1758203623,"~/src/Dockerfile"
+'2  2  6  ~/src/requirements.txt
+|4,50,2,6,1758203587,"~/src/requirements.txt"
+'3  39  0  ~/src/app.py
+|4,51,39,0,1758203567,"~/src/app.py"
 
 # Jumplist (newest first):
+-'  1  13  ~/.github/workflows/ci.yaml
+|4,39,1,13,1758204428,"~/.github/workflows/ci.yaml"
 -'  33  0  ~/src/Dockerfile
 |4,39,33,0,1758203623,"~/src/Dockerfile"
+-'  33  0  ~/src/Dockerfile
+|4,39,33,0,1758203623,"~/src/Dockerfile"
+-'  1  0  ~/src/Dockerfile
+|4,39,1,0,1758203592,"~/src/Dockerfile"
 -'  1  0  ~/src/Dockerfile
 |4,39,1,0,1758203592,"~/src/Dockerfile"
 -'  2  6  ~/src/requirements.txt
 |4,39,2,6,1758203587,"~/src/requirements.txt"
 -'  2  6  ~/src/requirements.txt
 |4,39,2,6,1758203587,"~/src/requirements.txt"
+-'  2  6  ~/src/requirements.txt
+|4,39,2,6,1758203587,"~/src/requirements.txt"
+-'  2  6  ~/src/requirements.txt
+|4,39,2,6,1758203587,"~/src/requirements.txt"
+-'  1  0  ~/src/requirements.txt
+|4,39,1,0,1758203576,"~/src/requirements.txt"
+-'  1  0  ~/src/requirements.txt
+|4,39,1,0,1758203576,"~/src/requirements.txt"
 -'  1  0  ~/src/requirements.txt
 |4,39,1,0,1758203576,"~/src/requirements.txt"
 -'  1  0  ~/src/requirements.txt
@@ -53,6 +69,22 @@
 |4,39,39,0,1758203567,"~/src/app.py"
 -'  39  0  ~/src/app.py
 |4,39,39,0,1758203567,"~/src/app.py"
+-'  39  0  ~/src/app.py
+|4,39,39,0,1758203567,"~/src/app.py"
+-'  39  0  ~/src/app.py
+|4,39,39,0,1758203567,"~/src/app.py"
+-'  39  0  ~/src/app.py
+|4,39,39,0,1758203567,"~/src/app.py"
+-'  39  0  ~/src/app.py
+|4,39,39,0,1758203567,"~/src/app.py"
+-'  1  0  ~/src/app.py
+|4,39,1,0,1758203541,"~/src/app.py"
+-'  1  0  ~/src/app.py
+|4,39,1,0,1758203541,"~/src/app.py"
+-'  1  0  ~/src/app.py
+|4,39,1,0,1758203541,"~/src/app.py"
+-'  1  0  ~/src/app.py
+|4,39,1,0,1758203541,"~/src/app.py"
 -'  1  0  ~/src/app.py
 |4,39,1,0,1758203541,"~/src/app.py"
 -'  1  0  ~/src/app.py
@@ -63,6 +95,13 @@
 |4,39,1,0,1758203541,"~/src/app.py"
 
 # History of marks within files (newest to oldest):
+
+> ~/.github/workflows/ci.yaml
+	*	1758204427	0
+	"	1	13
+	^	1	14
+	.	85	21
+	+	85	21
 
 > ~/src/Dockerfile
 	*	1758203616	0
